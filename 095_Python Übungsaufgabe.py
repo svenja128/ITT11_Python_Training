@@ -16,8 +16,9 @@ text1 = 2
 print("Text1 ist vom Datentyp:", type(text1), "und hat den Inhalt", text1)
 text1 = True
 print("Text1 ist vom Datentyp:", type(text1), "und hat den Inhalt", text1)
-
-
+# er erkennt automatisch den datentyp anhand des inhalts von "text1 =" und ändert diesen wenn man ihn anpasst
+# man spricht von untypiosierter sprache
+# Folge: Man muss jedes mal prüfen ob der Datentyp vorhanden ist
 
 # -----------------------------------------------------------------------------
 
@@ -58,8 +59,7 @@ print("Löschen des Eintrags '5' aus der Liste 'einkaufen'")
 ### Ergebnis: ['Brot', 'Äpfel', 'Salat', 'Eier']
 einkaufen.remove(5)
 print(einkaufen)
-
-
+# alternave lösung: del einkaufen[1]
 
 
 # -----------------------------------------------------------------------------
@@ -76,7 +76,7 @@ for item in einkaufen:
 print("\nAufgabe 3b: ")
 print("Durchlaufen der Liste einkaufen mit einer zählergesteuerten Schleife")
 
-for item in range(4):
+for item in range(len(einkaufen)):
     print(einkaufen[item])
 
 
@@ -99,7 +99,9 @@ text = "Welt"
 print("Verwende Variable Text um auf der Konsole 'Hallo Welt' auszugeben.")
 # Für diese Aufgabe gibt es mehrere Lösungsvarianten
 
-print("Hallo ", text)
+print("Hallo", text)
+print("Hallo " + text)
+print(f"Hallo {text}")
 
 ## Aufgabe 4b
 print("\nAufgabe 4b: ")
